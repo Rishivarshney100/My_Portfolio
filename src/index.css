@@ -12,12 +12,12 @@
 
 @layer components {
   .head-text {
-    @apply sm:text-5xl text-3xl font-bold sm:leading-snug text-gray-900 dark:text-white tracking-tight;
+    @apply sm:text-5xl text-2xl md:text-4xl font-bold sm:leading-snug text-gray-900 dark:text-white tracking-tight;
     font-family: "Poppins", sans-serif;
   }
 
   .subhead-text {
-    @apply font-bold sm:text-3xl text-xl relative text-gray-900 dark:text-white tracking-tight;
+    @apply font-bold sm:text-3xl text-lg md:text-2xl relative text-gray-900 dark:text-white tracking-tight text-center;
     font-family: "Poppins", sans-serif;
   }
 
@@ -26,15 +26,15 @@
   }
 
   .input {
-    @apply bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-semibold shadow-card;
+    @apply bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-sm md:text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-semibold shadow-card;
   }
 
   .textarea {
-    @apply block p-2.5 w-full text-base text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-semibold shadow-card;
+    @apply block p-2.5 w-full text-sm md:text-base text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-semibold shadow-card;
   }
 
   .btn {
-    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.02] hover:translate-y-[-2px];
+    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm md:text-base w-full sm:w-auto px-4 md:px-5 py-2 md:py-2.5 text-center relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.02] hover:translate-y-[-2px];
   }
 
   .btn::before {
@@ -58,27 +58,27 @@
   }
 
   .header {
-    @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+    @apply flex justify-between items-center px-4 sm:px-8 md:px-16 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
   }
 
   .footer {
-    @apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
+    @apply max-w-5xl mx-auto px-4 sm:px-8 md:px-16 pb-6 flex flex-col gap-4 md:gap-7;
   }
 
   .footer-container {
-    @apply flex flex-wrap gap-7 items-center justify-between;
+    @apply flex flex-col sm:flex-row gap-4 md:gap-7 items-center justify-between;
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-2 sm:mx-5 relative flex text-white flex-col gap-2 md:gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-4 sm:px-8;
   }
 
   .info-box p {
-    @apply font-bold text-lg leading-relaxed;
+    @apply font-bold text-base md:text-lg leading-relaxed;
   }
 
   .neo-btn {
-    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-bold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 hover:translate-y-[-2px] hover:bg-blue-50 text-lg;
+    @apply py-2 md:py-3 px-4 md:px-6 rounded-lg text-blue-500 text-center font-bold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-2 md:gap-3 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 hover:translate-y-[-2px] hover:bg-blue-50 text-base md:text-lg;
   }
 
   .neo-btn img {
@@ -90,11 +90,28 @@
   }
 
   .cta {
-    @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
+    @apply w-full flex items-center md:flex-row flex-col gap-4 md:gap-7 mt-8 sm:mt-12 md:mt-16;
   }
 
   .cta-text {
-    @apply text-gray-900 dark:text-white font-extrabold flex-1 text-3xl max-md:text-center tracking-tight;
+    @apply text-gray-900 dark:text-white font-extrabold flex-1 text-2xl md:text-3xl max-md:text-center tracking-tight;
+  }
+
+  .statistic-item {
+    @apply flex flex-col items-center p-3 md:p-4 rounded-xl shadow-lg bg-white dark:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl;
+    min-width: 120px;
+    max-width: 180px;
+  }
+
+  .circular-icon {
+    @apply w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center mb-2;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
+  }
+
+  .circular-icon p {
+    @apply text-white;
+    color: white !important;
   }
 }
 
@@ -117,7 +134,7 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container {
-    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    @apply max-w-5xl mx-auto px-4 sm:px-8 md:px-16 pb-8 md:pb-12 !pt-[100px] md:!pt-[126px] min-h-[calc(100vh-80px)];
   }
 
   .head-text {
@@ -125,7 +142,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .subhead-text {
-    @apply font-bold sm:text-3xl text-xl relative font-poppins text-gray-900 dark:text-white tracking-tight;
+    @apply font-bold sm:text-3xl text-xl relative font-poppins text-gray-900 dark:text-white tracking-tight text-center;
   }
 
   .blue-gradient_text {
@@ -202,6 +219,23 @@ body:has(.card[data-color="green"]:hover) {
 
   .cta-text {
     @apply text-gray-900 dark:text-white font-extrabold flex-1 text-3xl max-md:text-center tracking-tight;
+  }
+
+  .statistic-item {
+    @apply flex flex-col items-center p-4 rounded-xl shadow-lg bg-white dark:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl;
+    min-width: 150px; /* Ensure a minimum width for the card */
+    max-width: 200px; /* Prevent it from getting too wide */
+  }
+
+  .circular-icon {
+    @apply w-24 h-24 rounded-full flex items-center justify-center mb-2;
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue gradient */
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
+  }
+
+  .circular-icon p {
+    @apply text-white;
+    color: white !important;
   }
 }
 
@@ -750,5 +784,73 @@ p {
     float: none !important;
     margin: 0 0 1rem 0 !important;
     display: inline-block !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vertical-timeline-element-content {
+    @apply p-4;
+  }
+
+  .vertical-timeline-element-icon {
+    @apply w-8 h-8;
+  }
+
+  .vertical-timeline::before {
+    @apply left-6;
+  }
+
+  .vertical-timeline-element-date {
+    @apply text-sm;
+  }
+
+  .project-card {
+    @apply p-4;
+  }
+
+  .project-icon {
+    @apply w-12 h-12;
+  }
+
+  .project-title {
+    @apply text-lg;
+  }
+
+  .project-description {
+    @apply text-sm;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .vertical-timeline-element-content {
+    @apply p-3;
+  }
+
+  .vertical-timeline-element-icon {
+    @apply w-6 h-6;
+  }
+
+  .vertical-timeline::before {
+    @apply left-4;
+  }
+
+  .vertical-timeline-element-date {
+    @apply text-xs;
+  }
+
+  .project-card {
+    @apply p-3;
+  }
+
+  .project-icon {
+    @apply w-10 h-10;
+  }
+
+  .project-title {
+    @apply text-base;
+  }
+
+  .project-description {
+    @apply text-xs;
   }
 }

@@ -13,6 +13,7 @@ import hackathon from './hackathon.jpeg'
 import deloitte from './deloitte.jpeg'
 import research from './research.png'
 import organizinghead from './organizinghead.png'
+import finxthon from './finxthon.png'
 
 export {
     hero,
@@ -29,5 +30,6 @@ export {
     hackathon,
     deloitte,
     research,
-    organizinghead
+    organizinghead,
+    finxthon
 }

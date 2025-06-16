@@ -35,8 +35,6 @@ const About = () => {
             {education.map((edu, index) => (
               <VerticalTimelineElement
                 key={edu.company_name}
-                date={edu.date}
-                dateClassName="vertical-timeline-element-date"
                 iconStyle={{ background: edu.iconBg }}
                 icon={
                   <div className='flex justify-center items-center w-full h-full rounded-full overflow-hidden transition-transform duration-300 hover:scale-110'>
@@ -61,6 +59,9 @@ const About = () => {
                 }}
                 className="hover:scale-[1.02] transition-transform duration-300"
               >
+                <div style={{ marginBottom: '10px', fontWeight: 'bold', color: '#2b77e7', fontSize: '0.9rem' }}>
+                  {edu.date}
+                </div>
                 <div>
                   <h3 className='section-title'>
                     {edu.title}
@@ -123,8 +124,6 @@ const About = () => {
             {experiences.map((experience, index) => (
               <VerticalTimelineElement
                 key={experience.company_name}
-                date={experience.date}
-                dateClassName="vertical-timeline-element-date"
                 iconStyle={{ background: experience.iconBg }}
                 icon={
                   <div className='flex justify-center items-center w-full h-full rounded-full overflow-hidden transition-transform duration-300 hover:scale-110'>
@@ -147,6 +146,9 @@ const About = () => {
                 }}
                 className="hover:scale-[1.02] transition-transform duration-300"
               >
+                <div style={{ marginBottom: '10px', fontWeight: 'bold', color: '#2b77e7', fontSize: '0.9rem' }}>
+                  {experience.date}
+                </div>
                 <div>
                   <h3 className='section-title'>
                     {experience.title}
@@ -173,6 +175,24 @@ const About = () => {
             ))}
           </VerticalTimeline>
         </div>
+      </div>
+
+      {/* Resume Section */}
+      <div className="py-16 flex flex-col items-center">
+        <h3 className='subhead-text'>Resume</h3>
+        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+          <p className='section-text text-lg leading-relaxed text-center'>
+            Want to know more about my experience and skills? Check out my detailed resume.
+          </p>
+        </div>
+        <a
+          href="https://shorturl.at/urZqe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-block bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-[#2563eb] transition-all duration-300"
+        >
+          View Resume
+        </a>
       </div>
 
       <Achievements />

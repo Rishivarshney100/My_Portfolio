@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla, autodesk, bluestock, aspirenex, glbajaj, dps, hackathon, deloitte, research, organizinghead } from "../assets/images";
+import { meta, shopify, starbucks, tesla, autodesk, bluestock, aspirenex, glbajaj, dps, hackathon, deloitte, research, organizinghead, finxthon } from "../assets/images";
 import {
     car,
     contact,
@@ -275,6 +275,12 @@ export const achievements = [
         description: "Secured consecutive victories in the Bharat Shiksha Expo Hackathon in both 2024 and 2025, demonstrating consistent innovation and problem-solving skills.",
         image: hackathon,
         link: "https://www.linkedin.com/posts/anshsaxena02_hackathon-winner-innovation-activity-7204928682052661248-w3Jm?utm_source=share&utm_medium=member_desktop",
+    },
+    {
+        title: "Finalist: Finxthon 2023",
+        description: "Achieved finalist position in Finxthon 2023, showcasing strong problem-solving and innovative skills in a competitive environment.",
+        image: finxthon,
+        link: "https://www.linkedin.com/posts/rishi-varshney100_hackathon-q2-glbajaj-activity-7138387467447025664-W6rK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo", 
     },
     {
         title: "Deloitte Industrial Visit Selection",
