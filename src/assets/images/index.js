@@ -4,6 +4,15 @@ import shopify from './shopify.png'
 import starbucks from './starbucks.png'
 import tesla from './tesla.png'
 import logo from './logo.svg'
+import autodesk from './autodesk.png'
+import bluestock from './bluestock.png'
+import aspirenex from './aspirenex.png'
+import glbajaj from './glbajaj.png'
+import dps from './dps.png'
+import hackathon from './hackathon.jpeg'
+import deloitte from './deloitte.jpeg'
+import research from './research.png'
+import organizinghead from './organizinghead.png'
 
 export {
     hero,
@@ -11,5 +20,14 @@ export {
     shopify,
     starbucks,
     tesla,
-    logo
+    logo,
+    autodesk,
+    bluestock,
+    aspirenex,
+    glbajaj,
+    dps,
+    hackathon,
+    deloitte,
+    research,
+    organizinghead
 }

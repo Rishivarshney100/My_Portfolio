@@ -35,6 +35,7 @@ import streamlit from './streamlit.svg'
 import vscode from './vscode.svg'
 import java from './java.svg'
 import cpp from './cpp.svg'
+import school from './school.svg'
 
 export {
     css,
@@ -72,5 +73,6 @@ export {
     streamlit,
     vscode,
     java,
-    cpp
+    cpp,
+    school
 }

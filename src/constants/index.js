@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla, autodesk, bluestock, aspirenex, glbajaj, dps, hackathon, deloitte, research, organizinghead } from "../assets/images";
 import {
     car,
     contact,
@@ -30,7 +30,8 @@ import {
     streamlit,
     vscode,
     java,
-    cpp
+    cpp,
+    school
 } from "../assets/icons";
 
 export const skills = [
@@ -138,57 +139,41 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        title: "Software Development Engineer Intern",
+        company_name: "Autodesk",
+        icon: autodesk,
+        iconBg: "#E6F3FF",
+        date: "July 2025 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Working on developing and maintaining cloud-based solutions for Autodesk's flagship products",
+            "Collaborating with cross-functional teams to implement new features and optimize existing systems",
+            "Contributing to the development of scalable microservices architecture",
+            "Participating in code reviews and implementing best practices for code quality and performance",
+            "Utilizing modern technologies like React, Node.js, and cloud services to deliver robust solutions"
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        title: "SDE Intern",
+        company_name: "Bluestock Fintech",
+        icon: bluestock,
+        iconBg: "#2563eb",
+        date: "October 2024 - November 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Designed scalable systems with responsive front-ends and RESTful APIs, reducing integration time by 30% and improving system reliability across deployments",
+            "Collaborated with back-end engineers and senior developers to enhance user experience, resulting in a 20% boost in engagement and improved satisfaction ratings"
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        title: "Web Development Intern",
+        company_name: "AspireNex",
+        icon: aspirenex,
+        iconBg: "#7c3aed",
+        date: "July 2024 - September 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Built and maintained responsive web apps using React, HTML, CSS, and JavaScript, integrating 5+ third-party APIs (maps, payments) to expand features and improve user functionality",
+            "Collaborated with back-end engineers and designers to optimize user experience and performance, reducing page load time by 20% and increasing user engagement by 15%"
         ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+    }
 ];
 
 export const socialLinks = [
@@ -252,4 +237,60 @@ export const projects = [
         description: 'Created a web application for real estate listings, facilitating property search, viewing, and management for users.',
         link: 'https://github.com/adrianhajdin/estate',
     }
+];
+
+export const education = [
+    {
+        title: "B.Tech, Computer Science and Engineering (Artificial Intelligence)",
+        company_name: "G. L. Bajaj Institute of Technology and Management",
+        icon: glbajaj,
+        iconBg: "#fbc3bc",
+        date: "2022 – 2026",
+        points: [
+            "GPA: 9.02",
+            "Major: Artificial Intelligence",
+            "Minor: Cyber Security",
+            "Location: Greater Noida, India",
+        ],
+    },
+    {
+        title: "Senior Secondary",
+        company_name: "Delhi Public School",
+        icon: dps,
+        iconBg: "#accbe1",
+        date: "2020 – 2021",
+        points: [
+            "Stream: Science (PCM)",
+            "Percentage: 94.67%",
+            "Location: Rewari, India",
+        ],
+    },
+];
+
+export const achievements = [
+    {
+        title: "2x Winner: Bharat Shiksha Expo Hackathon",
+        description: "Secured consecutive victories in the Bharat Shiksha Expo Hackathon in both 2024 and 2025, demonstrating consistent innovation and problem-solving skills.",
+        image: hackathon,
+        link: "https://www.linkedin.com/posts/anshsaxena02_hackathon-winner-innovation-activity-7204928682052661248-w3Jm?utm_source=share&utm_medium=member_desktop",
+    },
+    {
+        title: "Deloitte Industrial Visit Selection",
+        description: "Selected among the top 30 students for an exclusive industrial visit to Deloitte, gaining insights into industry practices and interacting with recruiters.",
+        image: deloitte,
+        link: "https://www.linkedin.com/posts/rishi-varshney100_deloitte-industrialvisit-learningexperience-activity-7217610549860188161-vDMZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo",
+    },
+    {
+        title: "IEEE Research Paper Publication",
+        description: `Published IEEE research on using machine learning to revolutionize customer query analysis with improved accuracy, efficiency, and real-world impact.`,
+        image: research,
+        link: "https://www.linkedin.com/posts/rishi-varshney100_machinelearning-firstresearchpaper-customerexperience-activity-7200257922612813824-hLpT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo",
+    },
+    {
+        title: "Organizing Head: National Startup Summit 2024",
+        description:
+            "Served as the Organizing Head for the National Startup Summit 2024, overseeing all aspects of event planning and execution.",
+        image: organizinghead,
+        link: "https://www.linkedin.com/posts/rishi-varshney100_teameffort-teamappreciation-dreamteam-activity-7186058765882789888-ZrHN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo",
+    },
 ];
