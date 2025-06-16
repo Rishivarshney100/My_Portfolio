@@ -134,7 +134,7 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container {
-    @apply max-w-5xl mx-auto px-4 sm:px-8 md:px-16 pb-8 md:pb-12 !pt-[100px] md:!pt-[126px] min-h-[calc(100vh-80px)];
+    @apply max-w-5xl mx-auto px-4 sm:px-8 md:px-16 pb-8 md:pb-12 !pt-[100px] md:!pt-[126px] min-h-[calc(100vh-160px)] sm:min-h-[calc(100vh-80px)];
   }
 
   .head-text {
