@@ -60,26 +60,17 @@ const Projects = () => {
                 </div>
               }
             >
-              <div className='project-timeline-content'>
-                <h3 className='project-title text-2xl font-poppins font-semibold'>
-                  {project.name}
-                </h3>
-                <p className='project-description mt-2 text-slate-600'>{project.description}</p>
-                <div className='mt-5 flex items-center gap-2 font-poppins'>
-                  <Link
-                    to={project.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='project-link font-semibold text-blue-600 hover:text-blue-800 transition-colors duration-300'
-                  >
-                    Live Link
-                  </Link>
-                  <img
-                    src={arrow}
-                    alt='arrow'
-                    className='project-arrow w-4 h-4 object-contain'
-                  />
-                </div>
+              <div className='text-black'>
+                <h3 className='text-black text-[24px] font-bold'>{project.name}</h3>
+                <p className='text-black text-[16px] font-semibold' style={{ margin: 0 }}>{project.description}</p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='text-black text-[14px] font-semibold hover:text-blue-600'
+                >
+                  View Project →
+                </a>
               </div>
             </VerticalTimelineElement>
           ))}

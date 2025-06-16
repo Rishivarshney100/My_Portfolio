@@ -8,7 +8,7 @@ const Achievements = () => {
         {achievements.map((achievement, index) => (
           <div
             key={`achievement-${index}`}
-            className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300'
+            className='bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300'
           >
             <div className='relative aspect-square w-full overflow-hidden'>
               <img
@@ -18,10 +18,10 @@ const Achievements = () => {
               />
             </div>
             <div className='p-8'>
-              <h3 className='text-2xl font-semibold text-gray-800 mb-3'>
+              <h3 className='text-2xl font-semibold text-black dark:text-white mb-3'>
                 {achievement.title}
               </h3>
-              <p className='text-gray-600 mb-4 text-lg'>{achievement.description}</p>
+              <p className='text-black dark:text-white mb-4 text-lg'>{achievement.description}</p>
               {achievement.link && (
                 <a
                   href={achievement.link}

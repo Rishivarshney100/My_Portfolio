@@ -38,8 +38,23 @@
 .vertical-timeline-element-content {
   box-shadow: 0 3px 10px rgba(43, 119, 231, 0.1) !important;
   padding: 1.5rem !important;
+  color: #000 !important;
 }
 
 .vertical-timeline-element-content::before {
   border-right: 7px solid #fff !important;
+}
+
+/* Ensure all text in timeline is black */
+.vertical-timeline-element-content h3,
+.vertical-timeline-element-content p,
+.vertical-timeline-element-content li,
+.vertical-timeline-element-content div {
+  color: #000 !important;
+}
+
+/* Ensure company name is visible */
+.vertical-timeline-element-content .section-subtitle {
+  color: #000 !important;
+  font-weight: 600 !important;
 } 
