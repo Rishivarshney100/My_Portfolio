@@ -8,11 +8,12 @@ import { experiences, skills, education } from "../constants";
 import Achievements from "../components/Achievements";
 
 import "react-vertical-timeline-component/style.min.css";
+import "../styles/timeline.css";
 
 const About = () => {
   return (
     <section className='max-container'>
-      <h1 className='head-text'>
+      <h1 className='head-text animate-fade-in'>
         Hello, I'm{" "}
         <span className='blue-gradient_text font-semibold drop-shadow'>
           {" "}
@@ -21,9 +22,9 @@ const About = () => {
         👋
       </h1>
 
-      <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>
-        A Final year student, really into tech—especially stuff like AI, IoT, and NLP. I've worked on projects like Query Wizard and smart fashion tech, and I love building things that solve real-world problems. Right now, I'm exploring everything from machine learning models to web dev and trying to put together a solid portfolio. Always up for learning new stuff and experimenting with cool ideas!
+      <div className='mt-5 flex flex-col gap-3 text-slate-500 animate-slide-up'>
+        <p className='section-text text-lg leading-relaxed'>
+          A Final year student, really into tech—especially stuff like AI, IoT, and NLP. I've worked on projects like Query Wizard and smart fashion tech, and I love building things that solve real-world problems. Right now, I'm exploring everything from machine learning models to web dev and trying to put together a solid portfolio. Always up for learning new stuff and experimenting with cool ideas!
         </p>
       </div>
 
@@ -35,9 +36,10 @@ const About = () => {
               <VerticalTimelineElement
                 key={edu.company_name}
                 date={edu.date}
+                dateClassName="vertical-timeline-element-date"
                 iconStyle={{ background: edu.iconBg }}
                 icon={
-                  <div className='flex justify-center items-center w-full h-full rounded-full overflow-hidden'>
+                  <div className='flex justify-center items-center w-full h-full rounded-full overflow-hidden transition-transform duration-300 hover:scale-110'>
                     {edu.icon && (
                       <img
                         src={edu.icon}
@@ -52,14 +54,19 @@ const About = () => {
                   borderStyle: "solid",
                   borderBottomColor: edu.iconBg,
                   boxShadow: "none",
+                  transition: "all 0.3s ease",
                 }}
+                contentArrowStyle={{
+                  borderRight: `7px solid ${edu.iconBg}`,
+                }}
+                className="hover:scale-[1.02] transition-transform duration-300"
               >
                 <div>
-                  <h3 className='text-black text-xl font-poppins font-semibold'>
+                  <h3 className='section-title'>
                     {edu.title}
                   </h3>
                   <p
-                    className='text-black-500 font-medium text-base'
+                    className='section-subtitle'
                     style={{ margin: 0 }}
                   >
                     {edu.company_name}
@@ -70,7 +77,7 @@ const About = () => {
                   {edu.points.map((point, index) => (
                     <li
                       key={`education-point-${index}`}
-                      className='text-black-500/50 font-normal pl-1 text-sm'
+                      className='section-points pl-1 text-sm'
                     >
                       {point}
                     </li>
@@ -87,15 +94,15 @@ const About = () => {
 
         <div className='mt-16 flex flex-wrap gap-12'>
           {skills.map((skill) => (
-            <div className='block-container w-20 h-20' key={skill.name}>
-              <div className='btn-back rounded-xl' />
-              <div className='btn-front rounded-xl flex justify-center items-center flex-col'>
+            <div className='block-container w-20 h-20 group' key={skill.name}>
+              <div className='btn-back rounded-xl transition-all duration-300 group-hover:scale-110' />
+              <div className='btn-front rounded-xl flex justify-center items-center flex-col transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg'>
                 <img
                   src={skill.imageUrl}
                   alt={skill.name}
-                  className='w-1/2 h-1/2 object-contain'
+                  className='w-1/2 h-1/2 object-contain transition-transform duration-300 group-hover:scale-110'
                 />
-                <p className='text-sm font-poppins font-semibold text-center mt-2'>{skill.name}</p>
+                <p className='skill-name text-sm text-center mt-2'>{skill.name}</p>
               </div>
             </div>
           ))}
@@ -105,7 +112,7 @@ const About = () => {
       <div className='py-16'>
         <h3 className='subhead-text'>Work Experience</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-          <p>
+          <p className='section-text text-lg leading-relaxed'>
             I've worked with all sorts of companies, leveling up my skills and
             teaming up with smart people. Here's the rundown:
           </p>
@@ -117,9 +124,10 @@ const About = () => {
               <VerticalTimelineElement
                 key={experience.company_name}
                 date={experience.date}
+                dateClassName="vertical-timeline-element-date"
                 iconStyle={{ background: experience.iconBg }}
                 icon={
-                  <div className='flex justify-center items-center w-full h-full rounded-full overflow-hidden'>
+                  <div className='flex justify-center items-center w-full h-full rounded-full overflow-hidden transition-transform duration-300 hover:scale-110'>
                     <img
                       src={experience.icon}
                       alt={experience.company_name}
@@ -132,14 +140,19 @@ const About = () => {
                   borderStyle: "solid",
                   borderBottomColor: experience.iconBg,
                   boxShadow: "none",
+                  transition: "all 0.3s ease",
                 }}
+                contentArrowStyle={{
+                  borderRight: `7px solid ${experience.iconBg}`,
+                }}
+                className="hover:scale-[1.02] transition-transform duration-300"
               >
                 <div>
-                  <h3 className='text-black text-xl font-poppins font-semibold'>
+                  <h3 className='section-title'>
                     {experience.title}
                   </h3>
                   <p
-                    className='text-black-500 font-medium text-base'
+                    className='section-subtitle'
                     style={{ margin: 0 }}
                   >
                     {experience.company_name}
@@ -150,7 +163,7 @@ const About = () => {
                   {experience.points.map((point, index) => (
                     <li
                       key={`experience-point-${index}`}
-                      className='text-black-500/50 font-normal pl-1 text-sm'
+                      className='section-points pl-1 text-sm'
                     >
                       {point}
                     </li>

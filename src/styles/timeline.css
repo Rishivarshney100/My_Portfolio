@@ -1,0 +1,45 @@
+.vertical-timeline-element-date {
+  color: #2b77e7 !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  opacity: 1 !important;
+  padding: 0.5rem 1rem !important;
+  background: rgba(43, 119, 231, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(43, 119, 231, 0.1) !important;
+  transition: all 0.3s ease !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.vertical-timeline-element:hover .vertical-timeline-element-date {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(43, 119, 231, 0.2) !important;
+}
+
+@media screen and (max-width: 1169px) {
+  .vertical-timeline-element-date {
+    float: none !important;
+    margin: 0 0 1rem 0 !important;
+    display: inline-block !important;
+  }
+}
+
+/* Override default timeline styles */
+.vertical-timeline::before {
+  background: #2b77e7 !important;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #2b77e7, 0 0 0 8px rgba(43, 119, 231, 0.1) !important;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 3px 10px rgba(43, 119, 231, 0.1) !important;
+  padding: 1.5rem !important;
+}
+
+.vertical-timeline-element-content::before {
+  border-right: 7px solid #fff !important;
+} 

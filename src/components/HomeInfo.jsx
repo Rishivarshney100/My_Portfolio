@@ -17,11 +17,11 @@ const HomeInfo = ({ currentStage }) => {
   if (currentStage === 2) {
     return (
       <div className='info-box transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
-        <p className='font-medium sm:text-xl text-center'>
+        <p className='font-medium sm:text-xl text-center text-white'>
           Worked with many companies <br /> and picked up many skills along the way
         </p>
 
-        <Link to='/about' className='neo-brutalism-white neo-btn'>
+        <Link to='/about' className='neo-brutalism-white neo-btn text-white'>
           Learn more
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
         </Link>
@@ -32,11 +32,11 @@ const HomeInfo = ({ currentStage }) => {
   if (currentStage === 1) {
     return (
       <div className='info-box transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
-        <p className='font-medium text-center sm:text-xl'>
+        <p className='font-medium text-center sm:text-xl text-white'>
           Led multiple projects to success over the years. <br /> Curious about the impact?
         </p>
 
-        <Link to='/projects' className='neo-brutalism-white neo-btn'>
+        <Link to='/projects' className='neo-brutalism-white neo-btn text-white'>
           Visit my projects
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
         </Link>
@@ -48,10 +48,10 @@ const HomeInfo = ({ currentStage }) => {
     console.log('Current Stage:', currentStage);
     return (
       <div className='info-box transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
-        <p className='font-medium sm:text-xl text-center'>
+        <p className='font-medium sm:text-xl text-center text-white'>
           Want to contact or hire me? <br/> I'm just a few keystrokes away
         </p>
-        <Link to='/contact' className='neo-brutalism-white neo-btn'>
+        <Link to='/contact' className='neo-brutalism-white neo-btn text-white'>
           Let's talk
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
         </Link>

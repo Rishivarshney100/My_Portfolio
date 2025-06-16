@@ -4,50 +4,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --blue-rgb: 237 245 255;
-  --green-rgb: 125 161 35;
-}
-
-body {
-  font-family: "Work Sans", sans-serif;
-}
-
-body:has(.card[data-color="blue"]:hover) {
-  background-color: rgb(var(--blue-rgb) / 25%);
-}
-
-body:has(.card[data-color="green"]:hover) {
-  background-color: rgb(var(--green-rgb) / 25%);
-}
-
-@layer utilities {
-  .max-container {
-    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+@layer base {
+  html {
+    font-family: "Work Sans", system-ui, sans-serif;
   }
+}
 
+@layer components {
   .head-text {
-    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+    @apply sm:text-5xl text-3xl font-bold sm:leading-snug text-gray-900 dark:text-white tracking-tight;
+    font-family: "Poppins", sans-serif;
   }
 
   .subhead-text {
-    @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+    @apply font-bold sm:text-3xl text-xl relative text-gray-900 dark:text-white tracking-tight;
+    font-family: "Poppins", sans-serif;
   }
 
   .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent font-extrabold;
   }
 
   .input {
-    @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+    @apply bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-semibold shadow-card;
   }
 
   .textarea {
-    @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
+    @apply block p-2.5 w-full text-base text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-semibold shadow-card;
   }
 
   .btn {
-    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.02] hover:translate-y-[-2px];
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+
+  .btn:hover::before {
+    left: 100%;
   }
 
   .header {
@@ -66,8 +73,20 @@ body:has(.card[data-color="green"]:hover) {
     @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
   }
 
+  .info-box p {
+    @apply font-bold text-lg leading-relaxed;
+  }
+
   .neo-btn {
-    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-bold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 hover:translate-y-[-2px] hover:bg-blue-50 text-lg;
+  }
+
+  .neo-btn img {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+
+  .neo-btn:hover img {
+    @apply translate-x-1;
   }
 
   .cta {
@@ -75,7 +94,114 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .cta-text {
-    @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+    @apply text-gray-900 dark:text-white font-extrabold flex-1 text-3xl max-md:text-center tracking-tight;
+  }
+}
+
+:root {
+  --blue-rgb: 237 245 255;
+  --green-rgb: 125 161 35;
+}
+
+body {
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300;
+}
+
+body:has(.card[data-color="blue"]:hover) {
+  background-color: rgb(var(--blue-rgb) / 25%);
+}
+
+body:has(.card[data-color="green"]:hover) {
+  background-color: rgb(var(--green-rgb) / 25%);
+}
+
+@layer utilities {
+  .max-container {
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+  }
+
+  .head-text {
+    @apply sm:text-5xl text-3xl font-bold sm:leading-snug font-poppins text-gray-900 dark:text-white tracking-tight;
+  }
+
+  .subhead-text {
+    @apply font-bold sm:text-3xl text-xl relative font-poppins text-gray-900 dark:text-white tracking-tight;
+  }
+
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent font-extrabold;
+  }
+
+  .input {
+    @apply bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-semibold shadow-card;
+  }
+
+  .textarea {
+    @apply block p-2.5 w-full text-base text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-700 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-semibold shadow-card;
+  }
+
+  .btn {
+    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-base w-full sm:w-auto px-5 py-2.5 text-center relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/30 hover:scale-[1.02] hover:translate-y-[-2px];
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .header {
+    @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+  }
+
+  .footer {
+    @apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
+  }
+
+  .footer-container {
+    @apply flex flex-wrap gap-7 items-center justify-between;
+  }
+
+  .info-box {
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+  }
+
+  .info-box p {
+    @apply font-bold text-lg leading-relaxed;
+  }
+
+  .neo-btn {
+    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-bold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/20 hover:translate-y-[-2px] hover:bg-blue-50 text-lg;
+  }
+
+  .neo-btn img {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+
+  .neo-btn:hover img {
+    @apply translate-x-1;
+  }
+
+  .cta {
+    @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
+  }
+
+  .cta-text {
+    @apply text-gray-900 dark:text-white font-extrabold flex-1 text-3xl max-md:text-center tracking-tight;
   }
 }
 
@@ -96,8 +222,8 @@ body:has(.card[data-color="green"]:hover) {
 
 .block-container {
   position: relative;
-  transition: 250ms;
-  perspective: 500px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  perspective: 1000px;
 }
 
 .block-container .btn-back {
@@ -106,7 +232,7 @@ body:has(.card[data-color="green"]:hover) {
   z-index: -1;
   width: inherit;
   height: inherit;
-  transition: 250ms;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
   transform-origin: bottom right;
   transform: rotateZ(15deg);
@@ -151,18 +277,20 @@ body:has(.card[data-color="green"]:hover) {
   background-color: #ffffff33;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  transition: 250ms;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
   transform-origin: top left;
   overflow: hidden;
 }
 
 .block-container:hover > .btn-back {
-  transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+  transform: translateZ(30px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+  box-shadow: 20px 0 50px rgba(0, 0, 0, 0.1);
 }
 
 .block-container:hover > .btn-front {
-  transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+  transform: translateZ(100px) translateY(-8px) rotateX(15deg) rotateY(15deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Neo Brutalism */
@@ -180,4 +308,447 @@ body:has(.card[data-color="green"]:hover) {
   border: #fff;
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Add text highlight styles */
+.text-highlight {
+  @apply bg-yellow-200 px-1 rounded-sm;
+}
+
+.text-strong {
+  @apply font-bold text-black;
+}
+
+/* Enhance list items */
+ul li {
+  @apply font-medium text-black/90;
+}
+
+/* Enhance paragraph text */
+p {
+  @apply text-black font-medium leading-relaxed;
+}
+
+/* Experience section styles */
+.experience-text {
+  @apply text-black font-medium transition-colors duration-300;
+}
+
+.experience-text:hover {
+  @apply text-blue-600;
+}
+
+.experience-title {
+  @apply text-black text-xl font-bold transition-colors duration-300;
+}
+
+.experience-title:hover {
+  @apply text-blue-600;
+}
+
+.experience-company {
+  @apply text-black font-semibold transition-colors duration-300;
+}
+
+.experience-company:hover {
+  @apply text-blue-600;
+}
+
+.experience-points {
+  @apply text-black/90 font-medium transition-colors duration-300;
+}
+
+.experience-points:hover {
+  @apply text-blue-600;
+}
+
+/* Section text styles */
+.section-text {
+  @apply text-black font-medium transition-colors duration-300;
+}
+
+.section-text:hover {
+  @apply text-blue-600;
+}
+
+.section-title {
+  @apply text-black text-xl font-bold transition-colors duration-300;
+}
+
+.section-title:hover {
+  @apply text-blue-600;
+}
+
+.section-subtitle {
+  @apply text-black font-semibold transition-colors duration-300;
+}
+
+.section-subtitle:hover {
+  @apply text-blue-600;
+}
+
+.section-points {
+  @apply text-black/90 font-medium transition-colors duration-300;
+}
+
+.section-points:hover {
+  @apply text-blue-600;
+}
+
+/* Achievement specific styles */
+.achievement-title {
+  @apply text-black text-xl font-bold transition-colors duration-300;
+}
+
+.achievement-title:hover {
+  @apply text-blue-600;
+}
+
+.achievement-description {
+  @apply text-black/90 font-medium transition-colors duration-300;
+}
+
+.achievement-description:hover {
+  @apply text-blue-600;
+}
+
+/* Skill specific styles */
+.skill-name {
+  @apply text-black font-semibold transition-colors duration-300;
+}
+
+.skill-name:hover {
+  @apply text-blue-600;
+}
+
+/* Project page animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.project-card {
+  @apply transition-all duration-500 ease-out;
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+
+.project-card:hover {
+  @apply transform scale-[1.03] translate-y-[-8px] shadow-xl;
+}
+
+.project-icon {
+  @apply transition-all duration-500 ease-out;
+  animation: scaleIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.project-card:hover .project-icon {
+  @apply transform scale-110 rotate-6;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04));
+}
+
+.project-title {
+  @apply text-black font-bold transition-all duration-300;
+  animation: slideInRight 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.project-card:hover .project-title {
+  @apply text-blue-600 transform translate-x-1;
+}
+
+.project-description {
+  @apply text-black/80 transition-all duration-300;
+  animation: slideInRight 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+.project-card:hover .project-description {
+  @apply text-black transform translate-x-1;
+}
+
+.project-link {
+  @apply transition-all duration-300 ease-out;
+  animation: slideInRight 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+.project-card:hover .project-link {
+  @apply text-blue-600 transform translate-x-2;
+}
+
+.project-arrow {
+  @apply transition-all duration-300 ease-out;
+  animation: slideInRight 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.project-card:hover .project-arrow {
+  @apply transform translate-x-2;
+}
+
+/* Project card hover effects */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.project-card:hover::before {
+  transform: translateX(100%);
+}
+
+/* Project page header animations */
+.project-header {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.project-intro {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Timeline Animations */
+.vertical-timeline-element {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.vertical-timeline-element:nth-child(1) { animation-delay: 0.2s; }
+.vertical-timeline-element:nth-child(2) { animation-delay: 0.4s; }
+.vertical-timeline-element:nth-child(3) { animation-delay: 0.6s; }
+.vertical-timeline-element:nth-child(4) { animation-delay: 0.8s; }
+.vertical-timeline-element:nth-child(5) { animation-delay: 1.0s; }
+.vertical-timeline-element:nth-child(6) { animation-delay: 1.2s; }
+.vertical-timeline-element:nth-child(7) { animation-delay: 1.4s; }
+
+.vertical-timeline-element-content {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vertical-timeline-element-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-timeline-element-content:hover::before {
+  left: 100%;
+}
+
+.vertical-timeline-element-icon {
+  transition: all 0.3s ease;
+}
+
+.vertical-timeline-element:hover .vertical-timeline-element-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 4px white, 0 0 0 8px rgba(0, 97, 255, 0.2);
+}
+
+.project-timeline-content {
+  position: relative;
+  z-index: 1;
+}
+
+.project-timeline-content .project-title {
+  transition: all 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover .project-title {
+  transform: translateX(10px);
+  color: #0061ff;
+}
+
+.project-timeline-content .project-description {
+  transition: all 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover .project-description {
+  transform: translateX(10px);
+}
+
+.project-timeline-content .project-link {
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.project-timeline-content .project-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #0061ff;
+  transition: width 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover .project-link::after {
+  width: 100%;
+}
+
+.project-timeline-content .project-arrow {
+  transition: all 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover .project-arrow {
+  transform: translateX(5px);
+}
+
+/* Timeline Line Animation */
+.vertical-timeline::before {
+  background: linear-gradient(to bottom, #0061ff, #11d3f3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Timeline Responsive Adjustments */
+@media screen and (max-width: 1169px) {
+  .vertical-timeline-element-content {
+    margin-left: 0 !important;
+    padding: 1.5rem !important;
+  }
+  
+  .vertical-timeline-element-icon {
+    left: 0 !important;
+  }
+  
+  .vertical-timeline::before {
+    left: 18px !important;
+  }
+}
+
+/* Vertical Timeline Date Styles */
+.vertical-timeline-element-date {
+  color: #2b77e7 !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  opacity: 1 !important;
+  padding: 0.5rem 1rem !important;
+  background: rgba(43, 119, 231, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(43, 119, 231, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.vertical-timeline-element:hover .vertical-timeline-element-date {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(43, 119, 231, 0.2) !important;
+}
+
+@media screen and (max-width: 1169px) {
+  .vertical-timeline-element-date {
+    float: none !important;
+    margin: 0 0 1rem 0 !important;
+    display: inline-block !important;
+  }
 }
