@@ -81,7 +81,7 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='w-full flex flex-col gap-7 mt-14'
+          className='w-full flex flex-col gap-4 sm:gap-7 mt-8 sm:mt-14'
         >
           <label className='text-black-500 font-semibold'>
             Name
@@ -115,7 +115,7 @@ const Contact = () => {
             Your Message
             <textarea
               name='message'
-              rows='4'
+              rows='3'
               className='textarea'
               placeholder='Write your thoughts here...'
               value={form.message}
@@ -137,7 +137,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] sm:h-[400px] h-[300px]'>
         <Canvas
           camera={{
             position: [0, 0, 5],
