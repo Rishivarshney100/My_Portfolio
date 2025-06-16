@@ -12,7 +12,7 @@ const Home = () => {
   audioRef.current.loop = true;
 
   const [currentStage, setCurrentStage] = useState(1);
-  const [isRotating, setIsRotating] = useState(false);
+  const [isRotating, setIsRotating] = useState(true);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
   useEffect(() => {
@@ -30,10 +30,10 @@ const Home = () => {
 
     // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
+      screenScale = [2.2, 2.2, 2.2];
       screenPosition = [0, -1.5, 0];
     } else {
-      screenScale = [3, 3, 3];
+      screenScale = [4.2, 4.2, 4.2];
       screenPosition = [0, -4, -4];
     }
 
@@ -44,10 +44,10 @@ const Home = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
+      screenScale = [1.0, 1.0, 1.0];
       screenPosition = [0, -6.5, -43.4];
     } else {
-      screenScale = [1, 1, 1];
+      screenScale = [1.2, 1.2, 1.2];
       screenPosition = [0, -6.5, -43.4];
     }
 
@@ -64,9 +64,7 @@ const Home = () => {
       </div>
 
       <Canvas
-        className={`w-full h-screen bg-transparent ${
-          isRotating ? "cursor-grabbing" : "cursor-grab"
-        }`}
+        className='w-full h-screen bg-transparent'
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>

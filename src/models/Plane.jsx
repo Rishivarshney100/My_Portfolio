@@ -15,6 +15,8 @@ export function Plane({ isRotating, ...props }) {
   // Note: Animation names can be found on the Sketchfab website where the 3D model is hosted.
   useEffect(() => {
     if (isRotating) {
+      // Increase the animation speed by setting a higher timeScale
+      actions["Take 001"].timeScale = 5.0;
       actions["Take 001"].play();
     } else {
       actions["Take 001"].stop();
