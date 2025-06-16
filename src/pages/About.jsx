@@ -15,15 +15,14 @@ const About = () => {
         Hello, I'm{" "}
         <span className='blue-gradient_text font-semibold drop-shadow'>
           {" "}
-          Adrian
+          Rishi Varshney
         </span>{" "}
         👋
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Software Engineer based in Croatia, specializing in technical
-          education through hands-on learning and building applications.
+        A Final year student, really into tech—especially stuff like AI, IoT, and NLP. I've worked on projects like Query Wizard and smart fashion tech, and I love building things that solve real-world problems. Right now, I'm exploring everything from machine learning models to web dev and trying to put together a solid portfolio. Always up for learning new stuff and experimenting with cool ideas!
         </p>
       </div>
 
@@ -34,12 +33,13 @@ const About = () => {
           {skills.map((skill) => (
             <div className='block-container w-20 h-20' key={skill.name}>
               <div className='btn-back rounded-xl' />
-              <div className='btn-front rounded-xl flex justify-center items-center'>
+              <div className='btn-front rounded-xl flex justify-center items-center flex-col'>
                 <img
                   src={skill.imageUrl}
                   alt={skill.name}
                   className='w-1/2 h-1/2 object-contain'
                 />
+                <p className='text-sm font-poppins font-semibold text-center mt-2'>{skill.name}</p>
               </div>
             </div>
           ))}

@@ -1,31 +1,14 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 
-import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader } from "../components";
-import { soundoff, soundon } from "../assets/icons";
 import { Bird, Island, Plane, Sky } from "../models";
 
 const Home = () => {
-  const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.4;
-  audioRef.current.loop = true;
-
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(true);
-  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [islandRotation, setIslandRotation] = useState(0);
   const [showMessage, setShowMessage] = useState(false);
-
-  useEffect(() => {
-    if (isPlayingMusic) {
-      audioRef.current.play();
-    }
-
-    return () => {
-      audioRef.current.pause();
-    };
-  }, [isPlayingMusic]);
 
   // Map rotation to stage (1-4)
   useEffect(() => {
@@ -86,7 +69,7 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+      <div className='absolute top-20 left-0 right-0 z-10 flex items-center justify-center'>
         {showMessage && currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
@@ -129,15 +112,6 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
-
-      <div className='absolute bottom-2 left-2'>
-        <img
-          src={!isPlayingMusic ? soundoff : soundon}
-          alt='jukebox'
-          onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-          className='w-10 h-10 cursor-pointer object-contain'
-        />
-      </div>
     </section>
   );
 };

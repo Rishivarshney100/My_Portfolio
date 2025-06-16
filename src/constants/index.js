@@ -17,25 +17,42 @@ import {
     nodejs,
     pricewise,
     react,
-    redux,
     sass,
     snapgram,
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    firebase,
+    flask,
+    mysql,
+    python,
+    streamlit,
+    vscode,
+    java,
+    cpp
 } from "../assets/icons";
 
 export const skills = [
     {
+        imageUrl: cpp,
+        name: "C++",
+        type: "Backend",
+    },
+    {
+        imageUrl: java,
+        name: "Java",
+        type: "Backend",
+    },
+    {
+        imageUrl: firebase,
+        name: "Firebase",
+        type: "Backend",
+    },
+    {
         imageUrl: css,
         name: "CSS",
         type: "Frontend",
-    },
-    {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
     },
     {
         imageUrl: git,
@@ -63,16 +80,6 @@ export const skills = [
         type: "Database",
     },
     {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
         imageUrl: nextjs,
         name: "Next.js",
         type: "Frontend",
@@ -88,11 +95,6 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
         imageUrl: sass,
         name: "Sass",
         type: "Frontend",
@@ -106,6 +108,31 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
+    },
+    {
+        imageUrl: flask,
+        name: "Flask",
+        type: "Backend",
+    },
+    {
+        imageUrl: mysql,
+        name: "MySQL",
+        type: "Database",
+    },
+    {
+        imageUrl: python,
+        name: "Python",
+        type: "Backend",
+    },
+    {
+        imageUrl: streamlit,
+        name: "Streamlit",
+        type: "Frontend",
+    },
+    {
+        imageUrl: vscode,
+        name: "VS Code",
+        type: "Development Tools",
     }
 ];
 
@@ -200,29 +227,29 @@ export const projects = [
     {
         iconUrl: car,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'AI Car Renting',
+        description: 'Designed and built a mobile app for finding, booking, and managing car rentals, integrating AI recommendations for optimized user experience.',
+        link: 'https://github.com/adrianhajdin/ai_car_rent',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
         name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends through a familiar social media platform.',
+        link: 'https://github.com/adrianhajdin/snapgram',
     },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
         name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        description: 'Developed an AI-powered application that summarizes articles and lengthy texts, enhancing reading comprehension and efficiency.',
+        link: 'https://github.com/adrianhajdin/summiz',
+    },
+    {
+        iconUrl: estate,
+        theme: 'btn-back-green',
+        name: 'Real Estate Application',
+        description: 'Created a web application for real estate listings, facilitating property search, viewing, and management for users.',
+        link: 'https://github.com/adrianhajdin/estate',
     }
 ];

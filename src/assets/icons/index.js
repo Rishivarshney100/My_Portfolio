@@ -27,6 +27,15 @@ import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 
+import firebase from './firebase.svg'
+import flask from './flask.svg'
+import mysql from './mysql.svg'
+import python from './python.svg'
+import streamlit from './streamlit.svg'
+import vscode from './vscode.svg'
+import java from './java.svg'
+import cpp from './cpp.svg'
+
 export {
     css,
     express,
@@ -55,5 +64,13 @@ export {
     arrow,
     contact,
     soundon,
-    soundoff
+    soundoff,
+    firebase,
+    flask,
+    mysql,
+    python,
+    streamlit,
+    vscode,
+    java,
+    cpp
 }
