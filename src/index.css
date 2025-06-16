@@ -8,6 +8,41 @@
   html {
     font-family: "Work Sans", system-ui, sans-serif;
   }
+  
+  /* Add base text color for dark mode */
+  .dark {
+    color-scheme: dark;
+  }
+  
+  /* Make all text white in dark mode */
+  .dark * {
+    @apply text-white;
+  }
+  
+  /* Exclude specific elements that should keep their colors */
+  .dark .blue-gradient_text,
+  .dark .btn,
+  .dark .circular-icon p,
+  .dark .project-title,
+  .dark .project-description,
+  .dark .project-link,
+  .dark .project-arrow {
+    @apply text-inherit;
+  }
+
+  /* Override any specific text colors in dark mode */
+  .dark .text-gray-900,
+  .dark .text-black,
+  .dark .text-gray-800,
+  .dark .text-gray-700,
+  .dark .text-gray-600,
+  .dark .text-gray-500,
+  .dark .text-gray-400,
+  .dark .text-gray-300,
+  .dark .text-gray-200,
+  .dark .text-gray-100 {
+    @apply text-white;
+  }
 }
 
 @layer components {
