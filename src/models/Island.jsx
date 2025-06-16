@@ -10,7 +10,7 @@
  */
 
 import { a } from "@react-spring/three";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
@@ -18,22 +18,66 @@ import islandScene from "../assets/3d/island.glb";
 
 export function Island({
   setCurrentStage,
+  onRotate,
   ...props
 }) {
   const islandRef = useRef();
   const { nodes, materials } = useGLTF(islandScene);
+  const [isDragging, setIsDragging] = useState(false);
+  const [prevPointerX, setPrevPointerX] = useState(null);
 
   // Add auto-rotation
   useFrame((_, delta) => {
-    if (islandRef.current) {
+    if (islandRef.current && !isDragging) {
       // Reduce rotation speed
-      islandRef.current.rotation.y -= 0.1 * delta;
+      islandRef.current.rotation.y -= 0.2 * delta;
+    }
+    // Report rotation to parent
+    if (onRotate && islandRef.current) {
+      onRotate(islandRef.current.rotation.y);
     }
   });
 
+  // Pointer event handlers for drag-to-rotate
+  const handlePointerDown = (e) => {
+    setIsDragging(true);
+    setPrevPointerX(e.clientX);
+    // Prevent default to avoid unwanted selection
+    e.target.setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerUp = (e) => {
+    setIsDragging(false);
+    setPrevPointerX(null);
+    e.target.releasePointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e) => {
+    if (!isDragging || prevPointerX === null) return;
+    const deltaX = e.clientX - prevPointerX;
+    if (islandRef.current) {
+      // Adjust sensitivity as needed
+      islandRef.current.rotation.y -= deltaX * 0.003;
+    }
+    setPrevPointerX(e.clientX);
+  };
+
+  const handlePointerOut = () => {
+    setIsDragging(false);
+    setPrevPointerX(null);
+  };
+
   return (
     // {Island 3D model from: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907}
-    <a.group ref={islandRef} {...props}>
+    <a.group
+      ref={islandRef}
+      {...props}
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
+      onPointerMove={handlePointerMove}
+      onPointerOut={handlePointerOut}
+      style={{ cursor: isDragging ? "grabbing" : "grab" }}
+    >
       <mesh
         geometry={nodes.polySurface944_tree_body_0.geometry}
         material={materials.PaletteMaterial001}

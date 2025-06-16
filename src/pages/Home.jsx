@@ -14,6 +14,8 @@ const Home = () => {
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(true);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  const [islandRotation, setIslandRotation] = useState(0);
+  const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -24,6 +26,31 @@ const Home = () => {
       audioRef.current.pause();
     };
   }, [isPlayingMusic]);
+
+  // Map rotation to stage (1-4)
+  useEffect(() => {
+    // Normalize rotation to [0, 2PI)
+    let rot = islandRotation % (2 * Math.PI);
+    if (rot < 0) rot += 2 * Math.PI;
+    // Each stage covers 90 degrees (PI/2 radians)
+    // 0: [0, π/2), 1: [π/2, π), 2: [π, 3π/2), 3: [3π/2, 2π)
+    const segment = Math.floor((rot / (2 * Math.PI)) * 4) % 4;
+    setCurrentStage(segment + 1); // 1-based
+  }, [islandRotation]);
+
+  // Show message only when close to the center of the current segment
+  useEffect(() => {
+    const threshold = Math.PI / 4; // 45 degrees
+    let rot = islandRotation % (2 * Math.PI);
+    if (rot < 0) rot += 2 * Math.PI;
+    const segment = Math.floor((rot / (2 * Math.PI)) * 4) % 4;
+    // Center of each segment
+    const segmentCenter = (segment + 0.5) * (Math.PI / 2);
+    let distance = Math.abs(rot - segmentCenter);
+    // Account for wrap-around at 2π
+    if (distance > Math.PI) distance = 2 * Math.PI - distance;
+    setShowMessage(distance < threshold);
+  }, [islandRotation]);
 
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
@@ -60,7 +87,7 @@ const Home = () => {
   return (
     <section className='w-full h-screen relative'>
       <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-        {currentStage && <HomeInfo currentStage={currentStage} />}
+        {showMessage && currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
       <Canvas
@@ -89,6 +116,7 @@ const Home = () => {
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
+            onRotate={setIslandRotation}
             position={islandPosition}
             rotation={[0.1, 4.7077, 0]}
             scale={islandScale}

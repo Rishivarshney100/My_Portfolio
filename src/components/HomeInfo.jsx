@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 
 const HomeInfo = ({ currentStage }) => {
-  if (currentStage === 1)
+  if (currentStage === 3)
     return (
-      <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
+      <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5 transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
         Hi, I'm
         <span className='font-semibold mx-2 text-white'>Adrian</span>
         👋
@@ -16,7 +16,7 @@ const HomeInfo = ({ currentStage }) => {
 
   if (currentStage === 2) {
     return (
-      <div className='info-box'>
+      <div className='info-box transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
         <p className='font-medium sm:text-xl text-center'>
           Worked with many companies <br /> and picked up many skills along the way
         </p>
@@ -29,9 +29,9 @@ const HomeInfo = ({ currentStage }) => {
     );
   }
 
-  if (currentStage === 3) {
+  if (currentStage === 1) {
     return (
-      <div className='info-box'>
+      <div className='info-box transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
         <p className='font-medium text-center sm:text-xl'>
           Led multiple projects to success over the years. <br /> Curious about the impact?
         </p>
@@ -45,17 +45,17 @@ const HomeInfo = ({ currentStage }) => {
   }
 
   if (currentStage === 4) {
+    console.log('Current Stage:', currentStage);
     return (
-      <div className='info-box'>
-      <p className='font-medium sm:text-xl text-center'>
-        Need a project done or looking for a dev? <br/> I'm just a few keystrokes away
-      </p>
-
-      <Link to='/contact' className='neo-brutalism-white neo-btn'>
-        Let's talk
-        <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
-      </Link>
-    </div>
+      <div className='info-box transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
+        <p className='font-medium sm:text-xl text-center'>
+          Need a project done or looking for a dev? <br/> I'm just a few keystrokes away
+        </p>
+        <Link to='/contact' className='neo-brutalism-white neo-btn'>
+          Let's talk
+          <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
+        </Link>
+      </div>
     );
   }
 
