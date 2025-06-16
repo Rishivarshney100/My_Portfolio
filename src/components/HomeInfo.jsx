@@ -7,10 +7,10 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5 transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
         Hi, I'm
-        <span className='font-semibold mx-2 text-white'>Adrian</span>
+        <span className='font-semibold mx-2 text-white'>Rishi Varshney</span>
         👋
         <br />
-        A Software Engineer from Croatia 🇭🇷
+        An Upcoming SDE Intern At Autodesk ɪɴ
       </h1>
     );
 
@@ -37,7 +37,7 @@ const HomeInfo = ({ currentStage }) => {
         </p>
 
         <Link to='/projects' className='neo-brutalism-white neo-btn'>
-          Visit my portfolio
+          Visit my projects
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
         </Link>
       </div>
@@ -49,7 +49,7 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className='info-box transition-all duration-700 ease-in-out transform translate-y-0 opacity-100 hover:translate-y-[-10px]'>
         <p className='font-medium sm:text-xl text-center'>
-          Need a project done or looking for a dev? <br/> I'm just a few keystrokes away
+          Want to contact or hire me? <br/> I'm just a few keystrokes away
         </p>
         <Link to='/contact' className='neo-brutalism-white neo-btn'>
           Let's talk
