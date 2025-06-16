@@ -178,64 +178,66 @@ export const experiences = [
 
 export const socialLinks = [
     {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
-    },
-    {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/Rishivarshney100',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/rishi-varshney100/',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        iconUrl: summiz,
+        theme: 'btn-back-yellow',
+        name: 'Query Wizard: Database made easy',
+        description: 'An AI-powered Database handling platform that allows users to interact with real-time databases using NLP through text and voice input, from any location on the globe with multilingual support.',
+        link: 'https://github.com/Rishivarshney100/Query_Wizard_3.0',
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Clarity Code: AI-based Code Obfuscation',
+        description: 'An AI-based Code Obfuscation Tool designed to intelligently transform source code into a more obfuscated, less human-readable format, while preserving its original functionality.',
+        link: 'https://github.com/Rishivarshney100/Clarity_Code',
+    },
+    {
+        iconUrl: estate,
+        theme: 'btn-back-black',
+        name: 'Rakshak: Your Shield of Safety Anytime, Anywhere',
+        description: 'A comprehensive women\'s safety application with proactive safety measures, real-time threat detection, and community-driven features to protect users in dangerous situations.',
+        link: 'https://github.com/Rishivarshney100/Rakshak',
+    },
+    {
+        iconUrl: pricewise,
+        theme: 'btn-back-red',
+        name: 'MedQ App: Smart Bed Management and Queue Model',
+        description: 'A hospital-based healthcare solution for real-time OPD registration, bed availability, and predictive healthcare logistics, optimized with priority-based queuing.',
+        link: 'https://github.com/Rishivarshney100/MedQ',
     },
     {
         iconUrl: car,
         theme: 'btn-back-blue',
-        name: 'AI Car Renting',
-        description: 'Designed and built a mobile app for finding, booking, and managing car rentals, integrating AI recommendations for optimized user experience.',
-        link: 'https://github.com/adrianhajdin/ai_car_rent',
+        name: 'Face Authentication Security System',
+        description: 'A secure banking authentication system reducing OTP frauds using face recognition.',
+        link: 'https://github.com/Rishivarshney100/face-recognition',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends through a familiar social media platform.',
-        link: 'https://github.com/adrianhajdin/snapgram',
+        name: 'AI Pic: Text to Image Generator',
+        description: 'This project demonstrates how to generate an AI-generated image from a text prompt using the Stable Diffusion model. The model takes a text input and generates a corresponding image.',
+        link: 'https://github.com/Rishivarshney100/Brainwave_Matrix_Intern-/tree/main/AI%27%20Pic%20(Text%20to%20image%20generator)',
     },
     {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'Developed an AI-powered application that summarizes articles and lengthy texts, enhancing reading comprehension and efficiency.',
-        link: 'https://github.com/adrianhajdin/summiz',
-    },
-    {
-        iconUrl: estate,
+        iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Real Estate Application',
-        description: 'Created a web application for real estate listings, facilitating property search, viewing, and management for users.',
-        link: 'https://github.com/adrianhajdin/estate',
+        name: 'MPIN Validator',
+        description: 'A robust MPIN (Mobile PIN) validation system that checks for common patterns, demographic information, and keypad patterns to ensure strong and secure MPINs.',
+        link: 'https://github.com/Rishivarshney100/MPIN_Validator',
     }
 ];
 
