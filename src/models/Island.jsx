@@ -29,8 +29,8 @@ export function Island({
   // Add auto-rotation
   useFrame((_, delta) => {
     if (islandRef.current && !isDragging) {
-      // Increase rotation speed
-      islandRef.current.rotation.y -= 0.5 * delta;
+      // Reduce rotation speed
+      islandRef.current.rotation.y -= 0.4 * delta;
     }
     // Report rotation to parent
     if (onRotate && islandRef.current) {

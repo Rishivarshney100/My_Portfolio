@@ -67,9 +67,13 @@ const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className='text-black text-[14px] font-semibold hover:text-blue-600'
+                  className='text-black text-[14px] font-semibold hover:text-blue-600 transition-all duration-300 inline-flex items-center gap-2 group'
                 >
-                  View Project →
+                  <span className="relative">
+                    View Project
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                  </span>
+                  <span className="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </a>
               </div>
             </VerticalTimelineElement>
