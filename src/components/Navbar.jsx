@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import { socialLinks } from "../constants";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +32,23 @@ const Navbar = () => {
               <Link to="/contact" className="text-xl font-bold bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                 Hire Me
               </Link>
+              <div className="flex items-center gap-4 ml-4">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+                  >
+                    <img
+                      src={link.iconUrl}
+                      alt={link.name}
+                      className="w-6 h-6 object-contain"
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
 
             <button
@@ -85,6 +103,23 @@ const Navbar = () => {
             <Link to="/contact" className="text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">
               Hire Me
             </Link>
+            <div className="flex items-center gap-4 px-3 py-2">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+                >
+                  <img
+                    src={link.iconUrl}
+                    alt={link.name}
+                    className="w-6 h-6 object-contain"
+                  />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       )}
