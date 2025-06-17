@@ -31,7 +31,8 @@ import {
     vscode,
     java,
     cpp,
-    school
+    school,
+    leetcode
 } from "../assets/icons";
 
 export const skills = [
@@ -186,6 +187,11 @@ export const socialLinks = [
         name: 'LinkedIn',
         iconUrl: linkedin,
         link: 'https://www.linkedin.com/in/rishi-varshney100/',
+    },
+    {
+        name: 'LeetCode',
+        iconUrl: leetcode,
+        link: 'https://leetcode.com/u/Rishi_varshney/',
     }
 ];
 

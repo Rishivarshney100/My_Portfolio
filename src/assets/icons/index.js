@@ -26,6 +26,7 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import leetcode from '../images/leetcode.png'
 
 import firebase from './firebase.svg'
 import flask from './flask.svg'
@@ -74,5 +75,6 @@ export {
     vscode,
     java,
     cpp,
-    school
+    school,
+    leetcode
 }
