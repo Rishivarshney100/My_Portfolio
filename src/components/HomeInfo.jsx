@@ -10,7 +10,7 @@ const HomeInfo = ({ currentStage }) => {
         <span className='font-semibold mx-2 text-white'>Rishi Varshney</span>
         👋
         <br />
-        An Upcoming SDE Intern At Autodesk ɪɴ
+        SDE [PDMS - DPM - Engineering] Intern At Autodesk ɪɴ
       </h1>
     );
 
