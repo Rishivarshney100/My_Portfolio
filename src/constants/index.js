@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla, autodesk, bluestock, aspirenex, glbajaj, dps, hackathon, deloitte, research, organizinghead, finxthon } from "../assets/images";
+import { meta, shopify, starbucks, tesla, autodesk, bluestock, aspirenex, deccanaiexperts, SFT, patent, glbajaj, dps, hackathon, deloitte, research, organizinghead, finxthon } from "../assets/images";
 import {
     car,
     contact,
@@ -32,7 +32,14 @@ import {
     java,
     cpp,
     school,
-    leetcode
+    leetcode,
+    postman,
+    bruno,
+    splunk,
+    dynatrace,
+    sonarqube,
+    launchdarkly,
+    ec2
 } from "../assets/icons";
 
 export const skills = [
@@ -47,13 +54,48 @@ export const skills = [
         type: "Backend",
     },
     {
+        imageUrl: python,
+        name: "Python",
+        type: "Backend",
+    },
+    {
+        imageUrl: html,
+        name: "HTML",
+        type: "Frontend",
+    },
+    {
+        imageUrl: css,
+        name: "CSS",
+        type: "Frontend",
+    },
+    {
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "Frontend",
+    },
+    {
+        imageUrl: mysql,
+        name: "MySQL",
+        type: "Database",
+    },
+    {
+        imageUrl: mongodb,
+        name: "MongoDB",
+        type: "Database",
+    },
+    {
+        imageUrl: flask,
+        name: "Flask",
+        type: "Backend",
+    },
+    {
         imageUrl: firebase,
         name: "Firebase",
         type: "Backend",
     },
     {
-        imageUrl: css,
-        name: "CSS",
+        imageUrl: streamlit,
+        name: "Streamlit",
         type: "Frontend",
     },
     {
@@ -67,34 +109,39 @@ export const skills = [
         type: "Version Control",
     },
     {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
+        imageUrl: postman,
+        name: "Postman",
+        type: "Development Tools",
     },
     {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
+        imageUrl: bruno,
+        name: "Bruno",
+        type: "Development Tools",
     },
     {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
+        imageUrl: splunk,
+        name: "Splunk",
+        type: "Monitoring & Observability",
     },
     {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
+        imageUrl: dynatrace,
+        name: "Dynatrace",
+        type: "Monitoring & Observability",
     },
     {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
+        imageUrl: sonarqube,
+        name: "SonarQube",
+        type: "Development Tools",
     },
     {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
+        imageUrl: ec2,
+        name: "AWS EC2",
+        type: "Cloud & Infrastructure",
+    },
+    {
+        imageUrl: launchdarkly,
+        name: "LD",
+        type: "Cloud & Infrastructure",
     },
     {
         imageUrl: sass,
@@ -107,31 +154,6 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: flask,
-        name: "Flask",
-        type: "Backend",
-    },
-    {
-        imageUrl: mysql,
-        name: "MySQL",
-        type: "Database",
-    },
-    {
-        imageUrl: python,
-        name: "Python",
-        type: "Backend",
-    },
-    {
-        imageUrl: streamlit,
-        name: "Streamlit",
-        type: "Frontend",
-    },
-    {
         imageUrl: vscode,
         name: "VS Code",
         type: "Development Tools",
@@ -140,22 +162,36 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "Software Development Engineer Intern",
-        company_name: "Autodesk",
-        icon: autodesk,
-        iconBg: "#E6F3FF",
-        date: "July 2025 - Present",
+        title: "Deccan AI Experts",
+        company_name: "AI Data Specialist",
+        icon: deccanaiexperts,
+        iconBg: "#4F46E5",
+        date: "Feb 2026 - Present",
         points: [
-            "Working on developing and maintaining cloud-based solutions for Autodesk's flagship products",
-            "Collaborating with cross-functional teams to implement new features and optimize existing systems",
-            "Contributing to the development of scalable microservices architecture",
-            "Participating in code reviews and implementing best practices for code quality and performance",
-            "Utilizing modern technologies like React, Node.js, and cloud services to deliver robust solutions"
+            "Top 1% Experts Shaping Tomorrow's AI - Working under Project Illusion, contributing to training AI models through Reinforcement Learning from Human Feedback (RLHF) with Supervised Fine Tuning (SFT)",
+            "Collaborating with cross-functional AI teams to evaluate, annotate, and improve multi-modal model outputs across text, image, audio, and video tasks",
+            "Performing multimodal annotation across video datasets including hallucination detection, semantic labeling, image classification & captioning and scene understanding"
         ],
     },
     {
-        title: "SDE Intern",
-        company_name: "Bluestock Fintech",
+        title: "Autodesk",
+        company_name: "SDE Intern",
+        icon: autodesk,
+        iconBg: "#0066CC",
+        date: "July 2025 - Dec 2025",
+        points: [
+            "Built Fusion Support AI Assist, an AI-powered productivity tool for the Autodesk Fusion 360 ecosystem (deployed on AWS EC2) that reduced analysis time from 30 min to 15 sec, improving internal productivity",
+            "Presented Fusion Support AI Assist at the Autodesk Global Event: PDMS-AI Pechakucha'25, where the project received appreciation from PDMS-VP and was nominated for TechX under PHR team",
+            "Contributed to Fusion Team backend on QuickSilver initiatives such as Personal Hub Retirement (PHR) and Folder-Level Project Transfer (FLPT), enabling large-scale data migration & automation with a 98%+ success rate across 500k hubs",
+            "Led the Apigee migration for Folder Level Project Transfer and migrated 15+ critical APIs to Apigee",
+            "Proactively monitored PHR and resolved major issues by fixing 25+ data fixes and 15+ customer incidents",
+            "Maintained and cleaned up 10+ feature flags to improve code quality and reduce technical debt",
+            "Received 3 Awards from Sr. Director, Director and Scrum Master for outstanding performance throughout the internship"
+        ],
+    },
+    {
+        title: "Bluestock Fintech",
+        company_name: "SDE Intern",
         icon: bluestock,
         iconBg: "#2563eb",
         date: "October 2024 - November 2024",
@@ -165,8 +201,8 @@ export const experiences = [
         ],
     },
     {
-        title: "Web Development Intern",
-        company_name: "AspireNex",
+        title: "AspireNex",
+        company_name: "Web Development Intern",
         icon: aspirenex,
         iconBg: "#7c3aed",
         date: "July 2024 - September 2024",
@@ -197,6 +233,13 @@ export const socialLinks = [
 
 export const projects = [
     {
+        iconUrl: motion,
+        theme: 'btn-back-blue',
+        name: 'IRIS (Intelligent Review and Interview System)',
+        description: 'AI-powered voice interview platform for realistic job interview practice and AI-based hiring. Features real-time voice conversations, AI-generated dynamic questions, follow-up questions, live transcription, and comprehensive intelligent feedback.',
+        link: 'https://github.com/Rishivarshney100/Agentic_AI_Interviewer',
+    },
+    {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
         name: 'Query Wizard: Database made easy',
@@ -204,11 +247,11 @@ export const projects = [
         link: 'https://github.com/Rishivarshney100/Query_Wizard_3.0',
     },
     {
-        iconUrl: threads,
+        iconUrl: vscode,
         theme: 'btn-back-green',
         name: 'Clarity Code: AI-based Code Obfuscation',
         description: 'An AI-based Code Obfuscation Tool designed to intelligently transform source code into a more obfuscated, less human-readable format, while preserving its original functionality.',
-        link: 'https://github.com/Rishivarshney100/Clarity_Code',
+        link: 'https://github.com/Rishivarshney100/Clarity-code',
     },
     {
         iconUrl: estate,
@@ -218,18 +261,18 @@ export const projects = [
         link: 'https://github.com/Rishivarshney100/Rakshak',
     },
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'MedQ App: Smart Bed Management and Queue Model',
-        description: 'A hospital-based healthcare solution for real-time OPD registration, bed availability, and predictive healthcare logistics, optimized with priority-based queuing.',
-        link: 'https://github.com/Rishivarshney100/MedQ',
+        iconUrl: python,
+        theme: 'btn-back-blue',
+        name: 'Offline AI PCB Defect Detection',
+        description: 'Automated PCB defect detection with natural language query interface using YOLOv5 and custom Detection-Grounded VLM. Detects 6 defect types (Missing Hole, Mouse Bite, Open Circuit, Short, Spur, Spurious Copper) with <2s inference time and <1% hallucination rate. Features Streamlit web UI and works completely offline with no cloud dependencies.',
+        link: 'https://github.com/Rishivarshney100/Offline-AI-PCB-defect-detection',
     },
     {
         iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Face Authentication Security System',
-        description: 'A secure banking authentication system reducing OTP frauds using face recognition.',
-        link: 'https://github.com/Rishivarshney100/face-recognition',
+        theme: 'btn-back-orange',
+        name: 'Object Detection from Scratch',
+        description: 'A complete object detection system built from scratch (no pre-training) using PASCAL VOC 2007 dataset. Custom CNN-based detector trained from scratch to detect 3 classes (person, car, dog) with 73.2% mAP@0.5, 20fps inference speed, and 21MB model size. Features real-time webcam detection and evaluation metrics.',
+        link: 'https://github.com/Rishivarshney100/Object-Detection-from-scratch',
     },
     {
         iconUrl: snapgram,
@@ -239,12 +282,26 @@ export const projects = [
         link: 'https://github.com/Rishivarshney100/Brainwave_Matrix_Intern-/tree/main/AI%27%20Pic%20(Text%20to%20image%20generator)',
     },
     {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'MPIN Validator',
-        description: 'A robust MPIN (Mobile PIN) validation system that checks for common patterns, demographic information, and keypad patterns to ensure strong and secure MPINs.',
-        link: 'https://github.com/Rishivarshney100/MPIN_Validator',
+        iconUrl: pricewise,
+        theme: 'btn-back-red',
+        name: 'MedQ App: Smart Bed Management and Queue Model',
+        description: 'A hospital-based healthcare solution for real-time OPD registration, bed availability, and predictive healthcare logistics, optimized with priority-based queuing.',
+        link: 'https://github.com/Rishivarshney100/MedQ',
+    },
+    {
+        iconUrl: contact,
+        theme: 'btn-back-blue',
+        name: 'Face Authentication Security System',
+        description: 'A secure banking authentication system reducing OTP frauds using face recognition.',
+        link: 'https://github.com/Rishivarshney100/face-recognition',
     }
+    // {
+    //     iconUrl: threads,
+    //     theme: 'btn-back-green',
+    //     name: 'MPIN Validator',
+    //     description: 'A robust MPIN (Mobile PIN) validation system that checks for common patterns, demographic information, and keypad patterns to ensure strong and secure MPINs.',
+    //     link: 'https://github.com/Rishivarshney100/MPIN_Validator',
+    // }
 ];
 
 export const education = [
@@ -277,22 +334,34 @@ export const education = [
 
 export const achievements = [
     {
+        title: "Top 5 India: Samsung Solve for Tomorrow 2025",
+        description: "From 20,000+ → Top 100 → Top 40 → Top 5, Team Error 404 officially stood out as a Finalist in Samsung India 's Solve for Tomorrow 2025 (AI Track)",
+        image: SFT,
+        link: "https://www.linkedin.com/posts/rishi-varshney100_samsungsolvefortomorrow-sftindia2025-error404-activity-7393713013654081536-jch7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo",
+    },
+    {
         title: "2x Winner: Bharat Shiksha Expo Hackathon",
         description: "Secured consecutive victories in the Bharat Shiksha Expo Hackathon in both 2024 and 2025, demonstrating consistent innovation and problem-solving skills.",
         image: hackathon,
-        link: "https://www.linkedin.com/posts/anshsaxena02_hackathon-winner-innovation-activity-7204928682052661248-w3Jm?utm_source=share&utm_medium=member_desktop",
+        link: "https://www.linkedin.com/posts/rishi-varshney100_robotics-expo-hackathon-activity-7325501829717360640-b0f1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo",
     },
+    // {
+    //     title: "Finalist: Finxthon 2023",
+    //     description: "Achieved finalist position in Finxthon 2023, showcasing strong problem-solving and innovative skills in a competitive environment.",
+    //     image: finxthon,
+    //     link: "https://www.linkedin.com/posts/rishi-varshney100_hackathon-q2-glbajaj-activity-7138387467447025664-W6rK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo", 
+    // },
+    // {
+    //     title: "Deloitte Industrial Visit Selection",
+    //     description: "Selected among the top 30 students for an exclusive industrial visit to Deloitte, gaining insights into industry practices and interacting with recruiters.",
+    //     image: deloitte,
+    //     link: "https://www.linkedin.com/posts/rishi-varshney100_deloitte-industrialvisit-learningexperience-activity-7217610549860188161-vDMZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo",
+    // },
     {
-        title: "Finalist: Finxthon 2023",
-        description: "Achieved finalist position in Finxthon 2023, showcasing strong problem-solving and innovative skills in a competitive environment.",
-        image: finxthon,
-        link: "https://www.linkedin.com/posts/rishi-varshney100_hackathon-q2-glbajaj-activity-7138387467447025664-W6rK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo", 
-    },
-    {
-        title: "Deloitte Industrial Visit Selection",
-        description: "Selected among the top 30 students for an exclusive industrial visit to Deloitte, gaining insights into industry practices and interacting with recruiters.",
-        image: deloitte,
-        link: "https://www.linkedin.com/posts/rishi-varshney100_deloitte-industrialvisit-learningexperience-activity-7217610549860188161-vDMZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo",
+        title: "Patent Publication",
+        description: "Our invention Automated AI-Powered Database Handler Using Natural Native Language for Educational and Enterprise Databases has been officially published by the Indian Patent Office (U/S 11A).",
+        image: patent,
+        link: "https://www.linkedin.com/posts/rishi-varshney100_patentpublished-productengineering-startuplife-activity-7420122676440117249-85xZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECquX8B4vRUvzKzmRbFU1v90k3eb4lKdlo",
     },
     {
         title: "IEEE Research Paper Publication",

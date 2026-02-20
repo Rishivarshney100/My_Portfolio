@@ -10,7 +10,7 @@ const HomeInfo = ({ currentStage }) => {
         <span className='font-semibold mx-2 text-white'>Rishi Varshney</span>
         👋
         <br />
-        SDE [PDMS - DPM - Engineering] Intern At Autodesk ɪɴ
+        AI Data Specialist at Deccan AI Experts, Ex-Autodesk
       </h1>
     );
 

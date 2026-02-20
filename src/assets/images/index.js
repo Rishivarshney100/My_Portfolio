@@ -7,6 +7,9 @@ import logo from './logo.svg'
 import autodesk from './autodesk.png'
 import bluestock from './bluestock.png'
 import aspirenex from './aspirenex.png'
+import deccanaiexperts from '../icons/deccanaiexperts.png'
+import SFT from '../icons/SFT.png'
+import patent from '../icons/patent.png'
 import glbajaj from './glbajaj.png'
 import dps from './dps.png'
 import hackathon from './hackathon.jpeg'
@@ -25,6 +28,9 @@ export {
     autodesk,
     bluestock,
     aspirenex,
+    deccanaiexperts,
+    SFT,
+    patent,
     glbajaj,
     dps,
     hackathon,

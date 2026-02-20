@@ -1,20 +1,20 @@
 const Alert = ({ type, text }) => {
   return (
-    <div className='absolute top-[35rem] left-0 right-0 flex justify-center items-center'>
+    <div className='fixed top-20 left-0 right-0 z-50 flex justify-center items-center px-4 animate-slide-down'>
       <div
-        className={`p-2 ${
-          type === "danger" ? "bg-red-800" : "bg-blue-800"
-        } items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex`}
+        className={`p-3 ${
+          type === "danger" ? "bg-red-800" : "bg-green-600"
+        } items-center text-white leading-none rounded-lg flex lg:inline-flex shadow-2xl max-w-md`}
         role='alert'
       >
         <p
           className={`flex rounded-full ${
-            type === "danger" ? "bg-red-500" : "bg-blue-500"
-          } uppercase px-2 py-1 text-xs font-semibold mr-3`}
+            type === "danger" ? "bg-red-500" : "bg-green-500"
+          } uppercase px-3 py-1 text-xs font-semibold mr-3`}
         >
           {type === "danger" ? "Failed" : "Success"}
         </p>
-        <p className='mr-2 text-left'>{text}</p>
+        <p className='mr-2 text-left font-medium text-white'>{text}</p>
       </div>
     </div>
   );

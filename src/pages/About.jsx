@@ -24,7 +24,7 @@ const About = () => {
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500 animate-slide-up'>
         <p className='section-text text-lg leading-relaxed'>
-          A Final year student, really into tech—especially stuff like AI, IoT, and NLP. I've worked on projects like Query Wizard and smart fashion tech, and I love building things that solve real-world problems. Right now, I'm exploring everything from machine learning models to web dev and trying to put together a solid portfolio. Always up for learning new stuff and experimenting with cool ideas!
+        I'm a Final Year CS undergrad who's basically obsessed with building cool tech — especially anything that mixes <span className='blue-gradient_text font-semibold'>AI with real-world impact</span>. I like turning random <span className='blue-gradient_text font-semibold'>"what if this could work?"</span> ideas into actual products, whether that's mock interview bots, database copilots, or safety apps. <span className='blue-gradient_text font-semibold'>When I'm not building, you'll probably find me travelling or playing video games.</span> I enjoy fast learning, solving messy problems, and shipping things that people can actually use — plus I'm always up for a good tech meme or two along the way.
         </p>
       </div>
 
@@ -165,7 +165,7 @@ const About = () => {
                   {experience.points.map((point, index) => (
                     <li
                       key={`experience-point-${index}`}
-                      className='section-points pl-1 text-sm'
+                      className='section-points pl-1 text-xs'
                     >
                       {point}
                     </li>
@@ -186,7 +186,7 @@ const About = () => {
           </p>
         </div>
         <a
-          href="https://shorturl.at/urZqe"
+          href="https://drive.google.com/file/d/1-32Qaol-44otqSNiLeRiwostN-uEfdAO/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-block bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-[#2563eb] transition-all duration-300"

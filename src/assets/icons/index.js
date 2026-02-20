@@ -37,6 +37,13 @@ import vscode from './vscode.svg'
 import java from './java.svg'
 import cpp from './cpp.svg'
 import school from './school.svg'
+import postman from './postman.png'
+import bruno from './bruno.png'
+import splunk from './splunk.png'
+import dynatrace from './dynatrace.png'
+import sonarqube from './sonarqube.png'
+import launchdarkly from './launchdarkly.png'
+import ec2 from './ec2.png'
 
 export {
     css,
@@ -76,5 +83,12 @@ export {
     java,
     cpp,
     school,
-    leetcode
+    leetcode,
+    postman,
+    bruno,
+    splunk,
+    dynatrace,
+    sonarqube,
+    launchdarkly,
+    ec2
 }
